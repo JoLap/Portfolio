@@ -16,7 +16,7 @@ app.controller('SkillsController', function(){
         progress: 3.5
     }, {
         title: 'Graafinen suunnittelu',
-        progress: 1.5
+        progress: 2.5
     }];
 
     this.tableRows = this.items.length / this.tableCells;

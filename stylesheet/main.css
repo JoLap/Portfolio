@@ -3,8 +3,17 @@ html, body {
     height: 100%;
     margin: 0;
     background-image: url("../img/bg.png");
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
 }
 
+.timeline, .defaultFont {
+    font-family: 'Oswald', sans-serif;
+}
+
+.timeline-badge, .defaultFont {
+    font-size: 0.8em;
+}
 a{
   color: white;  
 }
@@ -14,6 +23,9 @@ h1 {
     font-size: 116px;
 }
 
+.bold {
+    font-weight: bold;
+}
 .navbar-right {
     margin-right: -5px;
 }
@@ -25,9 +37,6 @@ h1 {
     padding-bottom: 60px;
 }
 
-.openSansFont{
-    font-family: 'Open Sans Condensed', sans-serif;
-}
 
 .panel, .list-group, .list-group-item {
     background-color: rgba(0,0,0,0);
@@ -44,11 +53,40 @@ h1 {
 #contactPageFont{
     padding-bottom: 10%;
 }
+.skillsPageTable tr > td:nth-child(odd) {
+    text-align: left !important;
+}
+.skillsPageTable tr > td:nth-child(even) {
+    text-align: right !important; 
+ }
 
-tr td:nth-child(even), .openSansFont{
+.skillsPageTable td{
     font-size: 20px;
+    padding: 5px;
+    text-align: left;
+}
+.skillsPageTable td, .skillsPageTable th {
+    border: none !important;
+}
+
+.skillsPageTable td {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-style: italic;
+}
+
+.skillsPageTable th {
+    font-size: 18px;
     font-family: 'Open Sans Condensed', sans-serif;
 }
+table{
+    padding-bottom:5%;
+}
+
+.openSansItalicFont{
+    font-size: 20px;
+    font-style: italic;
+}
+
 .bottomFeeder > #faceimg{
     position: relative;
     top: -70px;
@@ -89,12 +127,6 @@ tr td:nth-child(even), .openSansFont{
     footer{
         display:none;
     }
-}
-
-.solid-top-blue{
-    border-top: 5px solid;
-    border-color:#000013;
-    padding-top: 20px;
 }
 
 footer {
