@@ -1,0 +1,10 @@
+ <section ng-controller="SkillsController as sCtrl">
+   <div class="col-md-6 text-center skills" ng-repeat="item in sCtrl.items">
+   		<span ng-repeat="i in [] | range: item.progress">
+   			<img class="star" src="img/star.png" />
+   		</span>
+   			<img class="star" src="img/halfStar.png" ng-show="{{item.progress % 1 != 0}}" />
+   			<br />
+   		<span class="openSansFont"> - "{{item.title}}"</span>
+   </div>
+ </section>

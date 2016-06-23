@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html ng-app="portfolio">
+	<head>
+		<title ng-bind>J.Lappi - Portfolio</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheet/bootstrap.min.css"></link>
+		<link rel="stylesheet" type="text/css" href="stylesheet/main.css"></link>
+		<link rel="stylesheet" type="text/css" href="stylesheet/jquery.fullPage.css"></link>
+		<link rel="stylesheet" type="text/css" href="stylesheet/angular-timeline.css"></link>
+		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheet/angular-timeline-bootstrap.css"></link>
+	</head>
+	<body>
+		<!-- nav -->
+		<nav-tab></nav-tab>
+		
+		<!-- content -->
+		<div id="fullpage"> 
+		<div class="container-fluid">
+	    <div class="row">
+	    	<div class="section" data-anchor="frontPage" id="section0">
+	    		<front-page></front-page>
+	    	</div>
+	    	<div class="section" data-anchor="aboutPage" id="section1">
+	            <about-page></about-page>
+	        </div>
+	        <div class="section" data-anchor="resumePage" id="section2">
+	            <resume-page></resume-page>
+            </div>
+            <div class="section" data-anchor="contactPage" id="section3">
+	            <contact-page id="scroll"></contact-page>
+            </div>
+	    </div>
+	    </div>
+	    </div>
+	<footer>
+		<span>&copy; 2016 <a href="mailto:lappi.jouko@gmail.com">Jouko Lappi</a></span>
+	</footer>
+	
+	<script type="text/javascript" src="vendor/angular.min.js"></script>
+	<script type="text/javascript" src="angular/app.js"></script>
+
+	<!-- directives -->
+	<script type="text/javascript" src="angular/directives/mainDirectives.js"></script>
+
+	<!-- controller -->
+	<script type="text/javascript" src="angular/controllers/timelineController.js"></script>
+	<script type="text/javascript" src="angular/controllers/skillsController.js"></script>
+	<script type="text/javascript" src="angular/filters/forLoop.js"></script>
+
+	<!-- vendors -->
+	<script type="text/javascript" src="vendor/jquery-2.2.4.min.js"></script>	
+	<script type="text/javascript" src="vendor/jquery-ui.min.js"></script>	
+	<script type="text/javascript" src="vendor/angular-timeline.js"></script>
+	<script type="text/javascript" src="vendor/jquery.fullpage.min.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="vendor/scrolloverflow.min.js"></script> -->
+	<script type="text/javascript">
+		var isPhoneDevice = "ontouchstart" in document.documentElement; 
+
+		$(document).ready(function() {
+			if(!isPhoneDevice){
+				initFullPage();
+			}
+
+			function initFullPage(){
+				$('#fullpage').fullpage({
+					afterLoad: function(from, to, dir){
+						if(to === 1){
+							$(".navbar-inverse").animate({"background-color": "#222"}, 100);
+						}else{
+							$(".navbar-inverse").animate({"background-color": "rgba(0,0,0,0)", "border": "0px"}, 100);
+						}
+
+						if(to === 3){
+							$('footer').css("display", "none");
+						}else{
+							$('footer').css("display", "block");
+						}
+					},
+					onLeave: function(from, to, dir){
+						//TODO: Siirrä tämä angulariin
+						switch(to){
+							case 1:
+								document.title = "J.Lappi - Portfolio";
+								break;
+							case 2:
+								document.title = "J.Lappi - Skills";
+								break;
+							case 3:
+								document.title = "J.Lappi - Resume";
+								break;
+							case 4:
+								document.title = "J.Lappi - Contact";
+								break;
+						}
+					},
+					anchors: ["frontPage", "aboutPage", "resumePage", "contactPage"],
+					menu: ".menu",
+					scrollOverflow: false,
+					responsiveWidth: 1670,
+					paddingTop: '5px'
+				});
+			}
+		});
+	</script>
+	</body>
+</html>

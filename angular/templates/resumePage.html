@@ -1,0 +1,22 @@
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="row">
+  <section ng-controller="TimelineController as timelineCtrl">
+  <timeline>
+  	<p>{{timelineCtrl.text}}</p>
+    <timeline-event ng-repeat="event in timelineCtrl.events" side="{{event.side}}"> <!--class="{{event.hideMobile ? 'hideMobile' : ''}} -->
+      <timeline-badge class="{{event.badgeClass}}">
+        <a href="{{event.badgeLink}}">{{event.badgeTitle}}</a>
+      </timeline-badge>
+      <timeline-panel class="{{event.badgeClass}}">
+        <timeline-heading>
+          <h5>{{event.title}}</h5>
+        </timeline-heading>
+        <p>{{event.content}}</p>
+      </timeline-panel>
+    </timeline-event>
+  </timeline>
+  </section>
+  </div>
+</div>
+<div class="col-md-2"></div>
