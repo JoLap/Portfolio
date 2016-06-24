@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="portfolio">
 	<head>
-		<title ng-bind>J.Lappi - Portfolio</title>
+		<title>J.Lappi - Portfolio</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="stylesheet/bootstrap.min.css"></link>
@@ -72,12 +72,6 @@
 							$(".navbar-inverse").animate({"background-color": "#222"}, 100);
 						}else{
 							$(".navbar-inverse").animate({"background-color": "rgba(0,0,0,0)", "border": "0px"}, 100);
-						}
-
-						if(to === 3){
-							$('footer').css("display", "none");
-						}else{
-							$('footer').css("display", "block");
 						}
 					},
 					onLeave: function(from, to, dir){

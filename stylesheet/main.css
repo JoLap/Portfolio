@@ -18,6 +18,10 @@ a{
   color: white;  
 }
 
+.timeline-badge > a {
+    text-decoration: underline;
+}
+
 h1 {
     font-family: 'Lobster', cursive;
     font-size: 116px;
@@ -135,8 +139,6 @@ footer {
     height: 50px;
     bottom: 0;
     width: 100%; 
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0)));
-    background-image: -moz-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 95%);
     padding: 50px 5px 25px 20px;
     color: DarkGray;
 }

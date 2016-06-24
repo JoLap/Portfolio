@@ -17,7 +17,7 @@ app.controller('TimelineController', function(){
     content: 'Diginuoret Ry, osana opinnäytetyötä toimin ohjaajana peliohjelmoinnista kiinnostuneille nuorille (5kk)',
     side: 'left',
     hideMobile: false,
-    badgeLink: '#'
+    badgeLink: ''
   }, {
     badgeClass: 'info',
     badgeTitle: '2015',
@@ -25,7 +25,7 @@ app.controller('TimelineController', function(){
     content: 'Enfo Zender, laskujenvälityspalvelussa sovelluskehittäjänä. Työharjoittelu (2kk)',
     side: 'right',
     hideMobile: false,
-    badgeLink: '#'
+    badgeLink: 'https://www.dropbox.com/s/7no9438jp91qc72/enfo.pdf?dl=0'
   }, {
     badgeClass: 'info',
     badgeTitle: '2014',
@@ -33,7 +33,7 @@ app.controller('TimelineController', function(){
     content: 'Hurja Solutions, HTML5, PHP, MySQL. Osana kehittämässä asiakkaiden verkkosivuja. (3kk)',
     side: 'left',
     hideMobile: false,
-    badgeLink: '#'
+    badgeLink: 'https://www.dropbox.com/s/f4q1drvnath6dzn/hurja.pdf?dl=0'
   }, {
     badgeClass: 'info',
     badgeTitle: '2014',
@@ -41,7 +41,7 @@ app.controller('TimelineController', function(){
     content: 'Kirjan kääntäminen tablet-laitteelle. Projekti tuli osaksi näyttelyä',
     side: 'left',
     hideMobile: false,
-    badgeLink: '#'
+    badgeLink: 'https://www.dropbox.com/s/ho7gue3cymmvt10/riisa.pdf?dl=0'
   }, {
     badgeClass: 'success',
     badgeTitle: '2012',
@@ -49,7 +49,7 @@ app.controller('TimelineController', function(){
     content: 'Savonia-ammattikorkeakoulu, tietotekniikan insinööri',
     side: 'right',
     hideMobile: false,
-    badgeLink: '#'
+    badgeLink: ''
   }, {
     badgeClass: 'success',
     badgeTitle: '2011',
@@ -57,7 +57,7 @@ app.controller('TimelineController', function(){
     content: 'Stipendejä menestyksestä!',
     side: 'right',
     hideMobile: false,
-    badgeLink: '#'
+    badgeLink: 'https://www.dropbox.com/s/5a466qymkg40lig/datamoni.pdf?dl=0'
   }, {
     badgeClass: 'info',
     badgeTitle: '2011',
@@ -65,7 +65,7 @@ app.controller('TimelineController', function(){
     content: 'BJA Refrigeration Consulting Engineers nimisessä firmassa olin palvelimen ylläpitäjänä',
     side: 'right',
     hideMobile: false,
-    badgeLink: '#'
+    badgeLink: ''
   }, {
     badgeClass: 'success',
     badgeTitle: '2009',
@@ -73,7 +73,7 @@ app.controller('TimelineController', function(){
     content: '',
     side: 'left',
     hideMobile: false,
-    badgeLink: '#'
+    badgeLink: ''
   }];
 });
 })();

@@ -6,7 +6,8 @@
   	<p>{{timelineCtrl.text}}</p>
     <timeline-event ng-repeat="event in timelineCtrl.events" side="{{event.side}}"> <!--class="{{event.hideMobile ? 'hideMobile' : ''}} -->
       <timeline-badge class="{{event.badgeClass}}">
-        <a href="{{event.badgeLink}}">{{event.badgeTitle}}</a>
+        <a href="{{event.badgeLink}}" target="_blank" ng-show="{{event.badgeLink}}">{{event.badgeTitle}}</a>
+        <span ng-show="{{!event.badgeLink}}">{{event.badgeTitle}}</span>
       </timeline-badge>
       <timeline-panel class="{{event.badgeClass}}">
         <timeline-heading>
